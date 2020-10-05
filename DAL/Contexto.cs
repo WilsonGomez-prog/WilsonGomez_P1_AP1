@@ -10,7 +10,7 @@ namespace WilsonGomez_P1_AP1.DAL
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlite(@"Data Source=DATA\Parcial_1.db");
+            optionsBuilder.UseSqlite(@"Data Source=DATA\Parcial1.db");
         }
     }
 }

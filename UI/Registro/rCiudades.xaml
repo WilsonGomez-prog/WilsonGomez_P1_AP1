@@ -5,10 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WilsonGomez_P1_AP1"
         mc:Ignorable="d"
-        Title="Registro de Ciudades" Height="500" Width="700">
+        Title="Registro de Ciudades" Height="200" Width="500">
     <Grid>
         <StackPanel>
-            
+            <Label Content="Ciudad ID: " Margin="-400,0,0,0" Width="88"/>
+            <TextBox x:Name="CiudadIdTextbox" Text="{Binding CiudadID}" Width="50" Height="23" Margin="-425,0,0,0"/>
+            <Button Height="30" Width="60" Margin="-300,-30,0,0">
+                <DockPanel>
+                    <TextBlock Margin="0,0,0,0">Buscar</TextBlock>
+                    <Image Source="/Imagenes/search_icon.png" Margin="5,0,0,0" Height="15"/>
+                </DockPanel>
+            </Button>
+
+
+
+
         </StackPanel>
     </Grid>
 </Window>

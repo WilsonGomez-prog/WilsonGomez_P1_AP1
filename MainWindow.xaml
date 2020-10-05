@@ -8,7 +8,7 @@
         Title="Registro de Ciudades Principal." Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <Menu>
+            <!-- <Menu>
                 <MenuItem x:Name="RegistroMenuItem" Header="Registro.">
                     <MenuItem x:Name="rCiudadesMenuItem" Header="Registro de Ciudades"/>             
                 </MenuItem>
@@ -20,7 +20,7 @@
                 <MenuItem x:Header="Ayuda."> 
                     <Menu/>              
                 </MenuItem>
-            </Menu>
+            </Menu> -->
         </StackPanel>
     </Grid>
 </Window>
