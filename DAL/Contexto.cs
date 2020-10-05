@@ -5,7 +5,7 @@ namespace WilsonGomez_P1_AP1.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<Ciudades> Ciudad { get; set; }
+        public DbSet<Ciudades> ciudades { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

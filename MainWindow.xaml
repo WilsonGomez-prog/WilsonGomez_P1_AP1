@@ -5,18 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WilsonGomez_P1_AP1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Registro de Ciudades Principal." Height="450" Width="800">
     <Grid>
         <StackPanel>
             <Menu>
-                <MenuItem x:Header="Registro.">
-                    <MenuItem x:Name="rRegistro*******" Header="Registro de *******"/>
-                    <MenuItem x:Name="rRegistro*******" Header="Registro de *******"/>                
+                <MenuItem x:Name="RegistroMenuItem" Header="Registro.">
+                    <MenuItem x:Name="rCiudadesMenuItem" Header="Registro de Ciudades"/>             
                 </MenuItem>
                 
-                <MenuItem x:Header="Consulta.">
-                    <MenuItem x:Name="cConsulta*******" Header="Consulta de *******"/>
-                    <MenuItem x:Name="cConsulta*******" Header="Consulta de *******"/>                
+                <MenuItem x:Name="ConsultaMenuItem" Header="Consulta.">
+                    <MenuItem x:Name="cCiudadesMenuItem" Header="Consulta de Ciudades"/>
                 </MenuItem>
                
                 <MenuItem x:Header="Ayuda."> 
