@@ -10,11 +10,11 @@
         <StackPanel>
             <Menu>
                 <MenuItem Header="Registro">
-                    <MenuItem x:Name="rCiudadesMenuItem" Header="Registro de Ciudades"/>             
+                    <MenuItem x:Name="rCiudadesMenuItem" Header="Registro de Ciudades" Click="rCiudadesMenuItem_Click"/>             
                 </MenuItem>
                 
                 <MenuItem Header="Consulta">
-                    <MenuItem x:Name="cCiudadesMenuItem" Header="Consulta de Ciudades"/>
+                    <MenuItem x:Name="cCiudadesMenuItem" Header="Consulta de Ciudades" Click="cCiudadesMenuItem_Click"/>
                 </MenuItem>
                
                 <MenuItem Header="Ayuda."> 

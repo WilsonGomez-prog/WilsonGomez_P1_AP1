@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WilsonGomez_P1_AP1.UI.Consultas;
+using WilsonGomez_P1_AP1.UI.Registros;
 
 namespace WilsonGomez_P1_AP1
 {
@@ -23,6 +25,18 @@ namespace WilsonGomez_P1_AP1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void rCiudadesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rCiudades registroCiudad = new rCiudades();
+            registroCiudad.Show();
+        }
+
+        public void cCiudadesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cCiudades consultaCiudad = new cCiudades();
+            consultaCiudad.Show();
         }
     }
 }
