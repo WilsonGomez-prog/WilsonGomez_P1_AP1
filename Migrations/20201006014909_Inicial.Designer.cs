@@ -8,7 +8,7 @@ using WilsonGomez_P1_AP1.DAL;
 namespace WilsonGomez_P1_AP1.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20201005230207_Inicial")]
+    [Migration("20201006014909_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

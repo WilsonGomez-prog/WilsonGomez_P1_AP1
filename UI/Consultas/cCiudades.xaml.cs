@@ -18,7 +18,7 @@ namespace WilsonGomez_P1_AP1.UI.Consultas
         {
             var lista = new List<Ciudades>();
 
-            if (string.IsNullOrWhiteSpace(CriterioTextBox.Text))
+            if (string.IsNullOrWhiteSpace(CriterioTextBox.Text) || string.IsNullOrEmpty(CriterioTextBox.Text))
             {
                 switch (FiltroComboBox.SelectedIndex)
                 {
@@ -27,9 +27,6 @@ namespace WilsonGomez_P1_AP1.UI.Consultas
                         break;
                     case 1:
                         lista = CiudadesBLL.GetList(e => e.Nombres.Contains(CriterioTextBox.Text));
-                        break;
-                    default:
-                        MessageBox.Show("Error, opcion no valida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
                         break;
                 }
             }

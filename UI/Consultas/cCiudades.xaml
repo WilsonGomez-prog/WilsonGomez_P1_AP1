@@ -24,10 +24,13 @@
                 </DockPanel>
             </Button>
 
-            <DataGrid x:Name="DatosDataGrid" ItemsSource="{Binding}" Height="329" Width="582">
-                <ColumnDefinition>
-                </ColumnDefinition>
+            <DataGrid x:Name="DatosDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Height="329" Width="582">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID de la ciudad" Binding="{Binding CiudadID}"/>
+                    <DataGridTextColumn Header="Nombre de la ciudad" Binding="{Binding Nombres}"/>
+                </DataGrid.Columns>
             </DataGrid>
+            
         </StackPanel>
     </Grid>
 </Window>
