@@ -5,21 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WilsonGomez_P1_AP1"
         mc:Ignorable="d"
-        Title="Registro de Ciudades" Height="200" Width="500">
+        Title="Registro de Ciudades" Height="200" Width="500" ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <Label Content="Ciudad ID: " Margin="-400,0,0,0" Width="88"/>
             <TextBox x:Name="CiudadIdTextbox" Text="{Binding CiudadID}" Width="50" Height="23" Margin="-425,0,0,0"/>
-            <Button Height="30" Width="60" Margin="-300,-30,0,0">
+            <Button x:Name="BuscarButton" Height="30" Width="60" Margin="-300,-30,0,0" Click="BuscarButton_Click">
                 <DockPanel>
                     <TextBlock Margin="0,0,0,0">Buscar</TextBlock>
                     <Image Source="/Imagenes/search_icon.png" Margin="5,0,0,0" Height="15"/>
                 </DockPanel>
             </Button>
 
-
-
-
+            <Label Content="Nombre: " Margin="-430,5,0,0" Width="56" Height="25"/>
+            <TextBox x:Name="NombresTextbox" Text="{Binding Nombres}" Width="200" Height="23" Margin="-275,0,0,0"/>
+            
+            <Button x:Name="NuevoButton" Height="30" Width="60" Margin="-415,15,0,0" Click="NuevoButton_Click">
+                <DockPanel>
+                    <TextBlock Margin="0,0,0,0">Nuevo</TextBlock>
+                    <Image Source="/Imagenes/new_icon.png" Margin="5,0,0,0" Height="15"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="GuardarButton" Height="30" Width="70" Margin="-250,-30,0,0" Click="NuevoButton_Click">
+                <DockPanel>
+                    <TextBlock Margin="0,0,0,0">Guardar</TextBlock>
+                    <Image Source="/Imagenes/save_icon.png" Margin="5,0,0,0" Height="17" Width="14"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="EliminarButton" Height="30" Width="70" Margin="-75,-30,0,0" Click="EliminarButton_Click">
+                <DockPanel>
+                    <TextBlock Margin="0,0,0,0">Eliminar</TextBlock>
+                    <Image Source="/Imagenes/delete_icon.png" Margin="5,0,0,0" Height="18" Width="16" />
+                </DockPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

@@ -8,19 +8,19 @@
         Title="Registro de Ciudades Principal." Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <!-- <Menu>
-                <MenuItem x:Name="RegistroMenuItem" Header="Registro.">
+            <Menu>
+                <MenuItem Header="Registro">
                     <MenuItem x:Name="rCiudadesMenuItem" Header="Registro de Ciudades"/>             
                 </MenuItem>
                 
-                <MenuItem x:Name="ConsultaMenuItem" Header="Consulta.">
+                <MenuItem Header="Consulta">
                     <MenuItem x:Name="cCiudadesMenuItem" Header="Consulta de Ciudades"/>
                 </MenuItem>
                
-                <MenuItem x:Header="Ayuda."> 
+                <MenuItem Header="Ayuda."> 
                     <Menu/>              
                 </MenuItem>
-            </Menu> -->
+            </Menu>
         </StackPanel>
     </Grid>
 </Window>

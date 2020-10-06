@@ -7,8 +7,25 @@
         mc:Ignorable="d"
         Title="Consulta de Ciudades" Height="500" Width="700">
     <Grid>
-        <StackPanel>
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10">
+            <Label Content="Filtro:" Width="68" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="FiltroComboBox" Width="136" Margin="-300,-22,0,0"/>
 
+            <Label Content="Criterio:" Width="68" Margin="10,-25,0,0"/>
+            <TextBox x:Name="CriterioTextBox" TextWrapping="Wrap" Width="120" Margin="200,-22,0,0"/>
+
+            <Button x:Name="ConsultarButton" Height="30" Width="75" Margin="475,-25,0,0">
+                <DockPanel>
+                    <TextBlock Margin="0, 5, 0, 0"> Buscar</TextBlock>
+                    <Image Source = "/Imagenes/search_icon.png" Height="20" Margin="5,0,0,0"/>
+                </DockPanel>
+            </Button>
+
+            <DataGrid x:Name="DatosDataGrid" Height="329" Width="582">
+                <ColumnDefinition>
+
+                </ColumnDefinition>
+            </DataGrid>
         </StackPanel>
     </Grid>
 </Window>
