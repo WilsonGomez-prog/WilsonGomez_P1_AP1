@@ -160,6 +160,27 @@ namespace WilsonGomez_P1_AP1.BLL
 
             return encontrado;
         }
+
+         public static bool Existe(string NombreCiudad)
+        {
+            bool encontrado = false;
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                encontrado = contexto.ciudades.Any(e => e.Nombres == NombreCiudad);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return encontrado;
+        }
     
         /// <summary>
         /// Permite extraer una lista con las entidades(ciudades) que posee la base de datos.
@@ -172,7 +193,7 @@ namespace WilsonGomez_P1_AP1.BLL
             
             try
             {
-                lista = contexto.ciudades.Where(criterio).ToList();
+                lista = contexto.ciudades.Where(criterio).AsNoTracking().ToList();
             }
             catch (Exception)
             {

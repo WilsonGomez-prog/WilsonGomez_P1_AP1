@@ -26,7 +26,7 @@
                     <Image Source="/Imagenes/new_icon.png" Margin="5,0,0,0" Height="15"/>
                 </DockPanel>
             </Button>
-            <Button x:Name="GuardarButton" Height="30" Width="70" Margin="-250,-30,0,0" Click="NuevoButton_Click">
+            <Button x:Name="GuardarButton" Height="30" Width="70" Margin="-250,-30,0,0" Click="GuardarButton_Click">
                 <DockPanel>
                     <TextBlock Margin="0,0,0,0">Guardar</TextBlock>
                     <Image Source="/Imagenes/save_icon.png" Margin="5,0,0,0" Height="17" Width="14"/>

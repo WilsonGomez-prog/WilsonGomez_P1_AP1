@@ -24,31 +24,43 @@ namespace WilsonGomez_P1_AP1.UI.Registros
         {
             bool valido = true;
 
-            if(NombresTextbox.Text.Length == 0)
+            if(NombresTextbox.Text.Length == 0 || string.IsNullOrEmpty(NombresTextbox.Text) || string.IsNullOrWhiteSpace(NombresTextbox.Text))
             {
                 valido = false;
-                MessageBox.Show("Error, ciudad no válida. El nombre está vacio.", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Error, ciudad no válida. \nEl nombre está vacio.", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            else if(Convert.ToInt32(CiudadIdTextbox.Text) > 0 || Convert.ToInt32(CiudadIdTextbox.Text) < 0 )
+            else if(CiudadesBLL.Existe(NombresTextbox.Text))
             {
                 valido = false;
-                MessageBox.Show("Error, ciudad no válida. El ID de la ciudad va vacío", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Error, ciudad no válida. \nLa ciudad ya existe en la base de datos.", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            if (valido)
+            {
+                this.ciudad.Nombres = NombresTextbox.Text;
             }
             return valido;
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var ciudad = CiudadesBLL.Buscar(Convert.ToInt32(CiudadIdTextbox.Text));
-            if(ciudad != null)
+            if(!CiudadesBLL.Existe(Convert.ToInt32(CiudadIdTextbox.Text)))
             {
-                this.ciudad = ciudad;
+                MessageBox.Show("Error, ciudad no encontrada. \nLo sentimos, la ciudad no existe en la base de datos.", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Limpiar();
             }
             else
             {
-                this.ciudad = new Ciudades();
+                var ciudad = CiudadesBLL.Buscar(Convert.ToInt32(CiudadIdTextbox.Text));
+                if(ciudad != null)
+                {
+                    this.ciudad = ciudad;
+                }
+                else
+                {
+                    this.ciudad = new Ciudades();
+                }
+                this.DataContext = this.ciudad;
             }
-            this.DataContext = this.ciudad;
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -83,7 +95,7 @@ namespace WilsonGomez_P1_AP1.UI.Registros
             }
             else
             {
-                MessageBox.Show("No se pudo eliminar la ciudad. El ID ingrasado no coincide con ninguna ciudad.", "¡Fallo!", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No se pudo eliminar la ciudad. \nEl ID ingrasado no coincide con ninguna ciudad.", "¡Fallo!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
